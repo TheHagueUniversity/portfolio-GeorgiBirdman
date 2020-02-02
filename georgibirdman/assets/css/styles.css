@@ -1,0 +1,29 @@
+/* Global styles------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#birdman-logo{
+	width: 250px;
+}
+
+.main-banner{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.menu-items{
+	display: flex;
+	flex-direction: row;
+	&:not(:first-child){
+		padding-left: 2rem;
+	}
+}
+
