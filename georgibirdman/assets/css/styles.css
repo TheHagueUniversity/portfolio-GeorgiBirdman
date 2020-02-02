@@ -1,13 +1,25 @@
 /* Global styles------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 html {
   box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+header{
+	top: 25px;
+	position: absolute;
+	width: 100%;
+}
+
+.container{
+	padding: 0 25px;
+}
+
 #birdman-logo{
-	width: 250px;
+	width: 220px;
 }
 
 .main-banner{
@@ -22,8 +34,53 @@ html {
 .menu-items{
 	display: flex;
 	flex-direction: row;
-	&:not(:first-child){
-		padding-left: 2rem;
+}
+
+.menu-items li:not(:first-child){
+	padding-left: 1rem;
+}
+
+.menu-items li:not(:last-child) a::after{
+	padding-left: 1rem;
+	font-weight: 400;
+	content: ' / ';
+}
+
+.menu-item{
+	display: flex;
+}
+
+.menu-item a{
+	margin-top: auto;
+	margin-bottom: auto;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	color: white;
+}
+
+#landing{
+	height: 100vh;
+	background:
+		linear-gradient(
+      rgba(7, 7, 7, 0.30),
+      rgba(7, 7, 7, 0.30)
+    ), url(../images/backgrounds/profile.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.largetext{
+	margin: 0;
+	color: white;
+	padding-top: 30vh;
+}
+
+@media(min-width: 750px){
+	.largetext{
+		font-size: 60px;
+		padding-right: 35vw;
 	}
 }
 
