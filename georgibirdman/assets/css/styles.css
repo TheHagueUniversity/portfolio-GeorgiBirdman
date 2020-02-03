@@ -26,13 +26,14 @@ h1, h2, h3, h4, h5{
 }
 
 .primary-color{
-	color: #F18A57;
+	color: #F18A57 !important;
 }
 
 /*-----Start of Homepage-----*/
 header{
 	position: fixed;
-	top: 25px;
+	padding: 25px 0;
+  background-color: #0009;
 	width: 100%;
 }
 
@@ -43,10 +44,7 @@ header{
 #birdman-logo{
 	width: 220px;
 }
-/*-----Navigations/Items-----*/
-nav ul li:hover {
-  background-color: #F18A57;
-}
+
 .main-banner{
 	list-style: none;
 	margin: 0;
@@ -54,8 +52,6 @@ nav ul li:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-  background-color: #0006;
-  opacity: 0.7;
   line-height: 10px;
 }
 
@@ -133,15 +129,29 @@ nav ul li:hover {
 	margin: 0 auto;
 }
 
+@media(min-width: 750px){
+	.section-title{
+		font-size: 60px;
+	}
+}
 /*------- in Between -------*/
-.container .between{
-  padding: 2.5 rem 0;
-  background-color: #6E6767;
-  position: absolute;
-  overflow: hidden;
+/* .container .between{ */
+/*   padding: 2.5 rem 0; */
+/*   background-color: #6E6767; */
+/*   position: absolute; */
+/*   overflow: hidden; */
+/* } */
+/* .container-inner{ */
+/* } */
+
+@media(min-width: 750px){
+	.blow-up{
+		text-align: center;
+		margin: 1em 0;
+		font-size: 60px;
+	}
 }
-.container-inner{
-}
+
 
 /*------- GRID for Project -------*/
 #works-grid{
@@ -221,12 +231,25 @@ nav ul li:hover {
 
 /*------- GRID for Education -------*/
 
-#Edu-grid{
+#bio{
+	background-color: #0f0f0f;
+	color: white;
+}
+
+@media(min-width:750px){
+	.lead{
+		font-size: 20px;
+	}
+}
+
+#edu-grid{
 	list-style: none;
 	padding: 0;
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 25px;
+
 }
 
 .btn{
@@ -279,3 +302,5 @@ footer p{
   padding: 60px 50px;
   overflow: auto;
 }
+
+
