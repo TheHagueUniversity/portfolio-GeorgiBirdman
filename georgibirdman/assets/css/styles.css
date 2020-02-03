@@ -1,6 +1,8 @@
 /* Global styles------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Montserrat|Roboto&display=swap');
+
 html {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
@@ -12,6 +14,10 @@ html {
 /*------- Typo -----*/
 h1, h2, h3, h4, h5{
 	font-family: 'Roboto', sans-serif;
+}
+
+p, ul,{
+  font-family: 'Dosis', sans-serif;
 }
 
 .largetext{
@@ -32,6 +38,7 @@ h1, h2, h3, h4, h5{
 /*-----Start of Homepage-----*/
 /*-----Start of Homepage-----*/
 header{
+  z-index: 1000;
 	position: fixed;
 	padding: 25px 0;
   background-color: #0009;
@@ -266,6 +273,77 @@ display: inline-block;
   margin-top: 50px;
   margin-bottom: 20px;
 }
+
+/*------- Reference -------*/
+@media(min-width: 750px){
+	#reference-grid{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+	}
+
+	.references-thumbnail-wrapper:{
+		align-items: center;
+	}
+
+  .references-thumbnail-wrapper{
+  	height: 250px;
+  }
+
+  .references-thumbnail-wrapper a{
+  	text-decoration: none;
+  	color: white;
+  	height: 100%;
+  	display: flex;
+  	position: relative;
+  	overflow: hidden;
+  }
+
+  .references-thumbnail-wrapper a::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:
+  		linear-gradient(
+        rgba(241, 138, 87, 0.00),
+        rgba(241, 138, 87, 0.80)
+      );
+  }
+
+  .references-thumbnail-title, .references-thumbnail-img{
+  	transition: 0.2s ease-in-out;
+  }
+
+  .references-thumbnail-title{
+  	padding: 0 25px;
+  	margin-top: auto;
+  	z-index: 1000;
+  	opacity: 0;
+  	transform: translateY(150%);
+  }
+
+  .references-thumbnail-img{
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	object-fit: cover;
+  	z-index: -100000;
+  }
+
+  .references-thumbnail-wrapper a:hover .references-thumbnail-img{
+  	transform: scale(1.1);
+  }
+
+  .references-thumbnail-wrapper a:hover .references-thumbnail-title{
+  	opacity: 1;
+  	transform: translateY(0%);
+  }
+}
 /*------- GRID for Experience -------*/
 .middleContent{
   background-color: #F0F8FF;
@@ -273,8 +351,20 @@ display: inline-block;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   padding: 3% 5%;
+  margin-top: 50px;
 }
 
+.description ul{
+  list-style:unset;
+  margin-bottom: -20px;
+}
+.experiencet li {
+  margin-top: 40px;
+}
+
+.description li {
+
+}
 
 /*------- Footer -------*/
 #contact{
@@ -289,7 +379,12 @@ footer{
 footer p{
   margin-top: 10%;
 }
-
+.entrywrap{
+  max-width:950px;
+  margin: auto;
+  padding: 60px 50px;
+  overflow: auto;
+}
 .contact-info a{
   padding:8px;
   width: 28%;
@@ -298,11 +393,4 @@ footer p{
   margin-top: -3px;
   display: inline-block;
   color: #CCEEFF;
-}
-
-.entrywrap{
-  max-width:950px;
-  margin: auto;
-  padding: 60px 50px;
-  overflow: auto;
 }
