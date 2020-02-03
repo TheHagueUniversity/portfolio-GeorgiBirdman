@@ -1,4 +1,5 @@
 /* Global styles------------------------------------*/
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,900&display=swap');
 html {
   box-sizing: border-box;
@@ -8,10 +9,27 @@ html {
   box-sizing: inherit;
 }
 
+/*------- Typo -----*/
 h1, h2, h3, h4, h5{
 	font-family: 'Roboto', sans-serif;
 }
 
+.largetext{
+	margin: 0;
+	color: white;
+	padding-top: 35vh;
+}
+
+/*----- Color -----*/
+.white{
+	color: white;
+}
+
+.primary-color{
+	color: #F18A57;
+}
+
+/*-----Start of Homepage-----*/
 header{
 	position: fixed;
 	top: 25px;
@@ -25,7 +43,10 @@ header{
 #birdman-logo{
 	width: 220px;
 }
-
+/*-----Navigations/Items-----*/
+nav ul li:hover {
+  background-color: #F18A57;
+}
 .main-banner{
 	list-style: none;
 	margin: 0;
@@ -33,6 +54,9 @@ header{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+  background-color: #0006;
+  opacity: 0.7;
+  line-height: 10px;
 }
 
 .menu-items{
@@ -62,7 +86,7 @@ header{
 	font-weight: 700;
 	color: white;
 }
-
+/*------ Center -------*/
 #landing{
 	z-index: -10000;
 	position: relative;
@@ -77,11 +101,6 @@ header{
 	background-size:cover;
 }
 
-.largetext{
-	margin: 0;
-	color: white;
-	padding-top: 35vh;
-}
 
 @media(min-width: 750px){
 	.largetext{
@@ -89,19 +108,13 @@ header{
 		padding-right: 35vw;
 	}
 }
+/*------ Details -------*/
 .highlight{
 	display: inline;
 	background-image: linear-gradient(#F18A57, #F18A57);
 	background-repeat: no-repeat;
 	background-size: 100% 16%;
 	background-position: 0% 105%;
-}
-.white{
-	color: white;
-}
-
-.primary-color{
-	color: #F18A57;
 }
 
 .mt-2{
@@ -113,12 +126,24 @@ header{
 	bottom: 25px;
 }
 
+/*------ DIVIDER -----*/
 .section-divider{
 	padding: 3rem 0;
 	max-width: 1100px;
 	margin: 0 auto;
 }
 
+/*------- in Between -------*/
+.container .between{
+  padding: 2.5 rem 0;
+  background-color: #6E6767;
+  position: absolute;
+  overflow: hidden;
+}
+.container-inner{
+}
+
+/*------- GRID for Project -------*/
 #works-grid{
 	list-style: none;
 	padding: 0;
@@ -130,7 +155,11 @@ header{
 @media(min-width: 750px){
 	#works-grid{
 		grid-template-columns: repeat(4, 1fr);
-}
+	}
+
+	.works-thumbnail-wrapper:nth-child(even){
+		transform: translateY(33.333333333%);
+	}
 }
 
 .works-thumbnail-wrapper{
@@ -188,4 +217,65 @@ header{
 .works-thumbnail-wrapper a:hover .works-thumbnail-title{
 	opacity: 1;
 	transform: translateY(0%);
+}
+
+/*------- GRID for Education -------*/
+
+#Edu-grid{
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 25px;
+}
+
+.btn{
+text-decoration: none;
+background:
+#FF6A4D;
+color:
+white;
+padding: 10px;
+display: inline-block;
+}
+
+/*------- GRID for Experience -------*/
+.middleContent{
+  background-color: #F0F8FF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 3% 5%;
+}
+
+
+/*------- Footer -------*/
+#contact{
+  padding: 3rem 0;
+  background: rgba(0,0,0,0.5);
+}
+footer{
+  text-align: center;
+  color: white;
+}
+
+footer p{
+  margin-top: 10%;
+}
+
+.contact-info a{
+  padding:8px;
+  width: 28%;
+  margin-left:-5px;
+  margin-right: -5px;
+  margin-top: -3px;
+  display: inline-block;
+  color: #CCEEFF;
+}
+
+.entrywrap{
+  max-width:950px;
+  margin: auto;
+  padding: 60px 50px;
+  overflow: auto;
 }
