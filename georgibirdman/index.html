@@ -5,6 +5,7 @@
 	<title>Birdman UX design studio</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
 	<header role="banner">
@@ -14,7 +15,7 @@
 					<a href="index.html"><img id="birdman-logo" src="assets/images/birdman.png" alt="The logo of Birdman studios"></a>
 				</li>
 				<div class="menu-items">
-					<li class="menu-item"><a href="projects.html">Projects</a></li>
+					<li class="menu-item"><a href="#projects">Projects</a></li>
 					<li class="menu-item"><a href="bio.html">Bio</a></li>
 					<li class="menu-item"><a href="contact.html">Contact</a></li>
 				</div>
@@ -23,9 +24,50 @@
 
 	</header>
 
-	<main id="landing">
-		<div class="container">
-			<h1 class="largetext">Hello, I am a UX design student based in The Hague.</h1>
+	<main>
+		<div id="landing">
+			<div class="container">
+				<h1 class="largetext">Hello, I am <span class="highlight">George</span>, <br> a <span class="highlight">UX</span> design student based in <span class="highlight">The Hague</span>.</h1>
+<i id="scroll-arrow" class="fas fa-arrow-down fa-7x primary-color mt-2"></i>
+			</div>
+		</div>
+
+		<div id="projects" class="section-divider">
+			<div class="container">
+				<h2>Selected works</h2>
+					<ul id="works-grid">
+
+						<li class="works-thumbnail-wrapper">
+							<a href="assets/projects/BEP.pdf">
+								<h3 class="works-thumbnail-title">Building Engaging Prototypes</h3>
+								<img class="works-thumbnail-img" src="assets/images/project_thumbnails/bep.png" alt="">
+							</a>
+						</li>
+
+						<li class="works-thumbnail-wrapper">
+							<a href="assets/projects/RijkStudio.pdf">
+								<h3 class="works-thumbnail-title">User Trailing Rijkstudio</h3>
+								<img class="works-thumbnail-img" width= 60% src="assets/images/project_thumbnails/RijkStudio.png" alt="">
+							</a>
+						</li>
+
+						<li class="works-thumbnail-wrapper">
+							<a href="assets/projects/FWDpay.pdf">
+								<h3 class="works-thumbnail-title">FWDpay Client Insight</h3>
+								<img class="works-thumbnail-img" src="assets/images/project_thumbnails/FWDpay.png" alt="">
+							</a>
+						</li>
+
+						<li class="works-thumbnail-wrapper">
+							<a href="https://xd.adobe.com/embed/ad796f8c-8309-4915-60cf-8a6d9d42930b-db48/">
+								<h3 class="works-thumbnail-title">InMe Web Design</h3>
+								<img class="works-thumbnail-img" src="assets/images/project_thumbnails/In-me.png" alt="">
+							</a>
+						</li>
+
+
+					</ul>
+			</div>
 		</div>
 	</main>
 
